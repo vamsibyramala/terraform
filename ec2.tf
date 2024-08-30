@@ -16,6 +16,6 @@ resource "aws_instance" "new" {
   key_name = "new-mumbai"
   count = var.number
   tags = {
-    Name = "terraform"
+    Name = "terraform-${count.index}"
   }
 }
